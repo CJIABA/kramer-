@@ -1,0 +1,755 @@
+@import "variable";
+
+%extend_1 {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    color: $color_mariner_approx;
+    transition: all 0.9s;
+}
+
+%extend_2 {
+    text-decoration: none;
+    color: $color_matisse_approx;
+    transition: all 0.9s;
+}
+
+%extend_3 {
+    font-family: $font_0, $font_1;
+    font-size: 21px;
+    padding: 0;
+    color: $white;
+    background: none;
+}
+
+%extend_4 {
+    font-family: $font_2, $font_3;
+    font-size: 22px;
+    color: $white;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 70px;
+}
+
+%extend_5 {
+    border: none;
+    border-bottom: 2px solid $color_forest_green_approx;
+    font-family: $font_0, $font_1;
+    resize: none;
+    width: 100%;
+}
+
+body {
+    text-rendering: optimizelegibility;
+    height: 100%;
+}
+
+h1 {
+    font-family: $font_0, $font_1;
+    font-size: 120px;
+    line-height: 130px;
+    text-align: center;
+}
+
+h2 {
+    font-family: $font_0, $font_1;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+h3 {
+    font-family: $font_0, $font_1;
+    font-size: 40px;
+    line-height: 25px;
+    text-align: center;
+    margin: 80px auto;
+}
+
+h4 {
+    font-family: $font_0, $font_1;
+    font-size: 30px;
+    line-height: 25px;
+    text-align: center;
+}
+
+h5 {
+    font-family: $font_0, $font_1;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+}
+
+h6 {
+    font-family: $font_0, $font_1;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+}
+
+p {
+    font-family: $font_0, $font_1;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.hover-link {
+    color: $color_tuna_approx;
+    border-bottom: 1px dotted;
+    &:hover {
+        @extend %extend_1;
+    }
+    &:focus {
+        @extend %extend_1;
+    }
+}
+
+.linkTwitter {
+    text-decoration: none;
+    color: $color_silver_sand_approx;
+    &:hover {
+        border-bottom: 1px dotted;
+        text-decoration: none;
+        color: $color_silver_sand_approx;
+    }
+}
+
+.tag {
+    text-decoration: none;
+    color: $color_matisse_approx;
+    &:hover {
+        border-bottom: 1px dotted;
+        text-decoration: none;
+        color: $color_matisse_approx;
+    }
+}
+
+.hover-link-email {
+    color: $white;
+    &:hover {
+        @extend %extend_2;
+    }
+    &:focus {
+        @extend %extend_2;
+    }
+}
+
+.green {
+    color: $color_forest_green_approx;
+}
+
+a {
+    &:active {
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.navbar {
+    background: transparent;
+    border: none;
+    color: $white;
+    margin-bottom: -7%;
+    z-index: 4;
+    .navbar-nav li a {
+        font-family: $font_0, $font_1;
+        font-size: 21px;
+        color: $white;
+        margin-left: 50px;
+        padding: 0;
+        &:hover {
+            font-family: $font_0, $font_1;
+            font-size: 21px;
+            padding: 0;
+            color: $color_forest_green_approx;
+            border-bottom: 0;
+        }
+    }
+}
+
+.navbar-default {
+    .navbar-brand {
+        background: $url_3;
+        display: block;
+        height: 52px;
+        width: 140px;
+        margin-top: -11px;
+        &:hover {
+            background: $url_3;
+            display: inline;
+        }
+    }
+    .navbar-nav > .active > a {
+        @extend %extend_3;
+        &:hover {
+            @extend %extend_3;
+        }
+        &:focus {
+            @extend %extend_3;
+        }
+    }
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+video {
+    z-index: 0;
+    &.fillWidth {
+        width: 100%;
+    }
+}
+
+.header {
+    background: $url_5 center center fixed;
+    background-size: cover;
+    background-position: left top;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    z-index: 2;
+}
+
+div {
+    &.circle {
+        background: $color_screamin_green_approx;
+        border-radius: 100%;
+        height: 50px;
+        width: 50px;
+        margin: 10px auto 5px;
+        a {
+            font: $font_0, $font_1;
+            font-size: 50px;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    &#scroll-able {
+        height: 10px;
+        overflow: scroll;
+        margin-bottom: 120px;
+        position: relative;
+    }
+}
+
+.about-wrap {
+    background-color: $color_pickled_bluewood_approx;
+}
+
+#threeSections {
+    background-color: $color_pickled_bluewood_approx;
+    color: $white;
+    p {
+        font-family: $font_2, $font_3;
+        font-size: 20px;
+        line-height: 29px;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.svgIcon {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#portfolio {
+    background-color: $white;
+    overflow: hidden;
+    h3 {
+        color: $black;
+    }
+}
+
+#projekt-menu {
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    margin: 20px 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        left: 50%;
+        float: left;
+        font: 20px $font_0, $font_1;
+        height: 30px;
+        li {
+            position: relative;
+            left: -50%;
+            float: left;
+            margin: 0 5px;
+            height: 30px;
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 4px 10px;
+            }
+        }
+    }
+    .active {
+        border-radius: 30px;
+        background-color: $color_screamin_green_approx;
+        color: $black;
+    }
+}
+
+.tile {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    li {
+        display: block;
+        float: left;
+        position: relative;
+        width: 33.3333%;
+        overflow: hidden;
+    }
+}
+
+.caption-inner {
+    text-align: center;
+    margin: 42% auto;
+}
+
+.captions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $color_tuna_70_approx;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    display: none;
+    text-align: center;
+    color: $white !important;
+    z-index: 2;
+}
+
+.title {
+    padding-bottom: 10px;
+}
+
+.viewProject {
+    @extend %extend_4;
+    &:hover {
+        text-decoration: none;
+        color: $color_mountain_meadow_approx;
+    }
+}
+
+.viewWebsite {
+    @extend %extend_4;
+    margin-top: 80px;
+    &:hover {
+        text-decoration: none;
+        color: $color_mountain_meadow_approx;
+    }
+}
+
+.team-info {
+    margin: 20px auto;
+}
+
+#team {
+    background-color: $color_boston_blue_approx;
+    text-align: center;
+    h3 {
+        color: $white;
+    }
+    p {
+        color: $white;
+        padding-bottom: 60px;
+    }
+    h4 {
+        color: $white;
+        margin: 20px auto;
+    }
+}
+
+#contacts {
+    float: left;
+}
+
+input {
+    @extend %extend_5;
+}
+
+textarea {
+    @extend %extend_5;
+}
+
+.button {
+    margin: 45px 0 5px;
+    background: $color_forest_green_approx;
+    border: none;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.addres-info {
+    float: right;
+    font: 20px $font_0, $font_1;
+    dt {
+        margin: 10px auto;
+    }
+}
+
+#contact {
+    background-color: $color_pickled_bluewood_approx;
+    color: $white;
+    p {
+        text-align: left;
+    }
+    a {
+        margin: 10px auto;
+        color: $white;
+        font-size: 28px;
+    }
+    .logo {
+        margin: auto 20px;
+    }
+    .social-link li {
+        display: inline-flex;
+        margin: auto 10px;
+    }
+}
+
+@media(min-width: 1550px) {
+    .tile li {
+        width: 25%;
+        &:nth-last-child(3) {
+            margin: 0;
+        }
+    }
+}
+
+@media(min-width: 767px) and(max-width: 768px) {
+    p {
+        text-align: center;
+    }
+    .navbar {
+        > {
+            .container .navbar-brand {
+                margin-left: 10px;
+            }
+            .container-fluid .navbar-brand {
+                margin-left: 10px;
+            }
+        }
+        .navbar-nav li a {
+            margin-left: 44px;
+        }
+    }
+    .header {
+        background: $url_5 no-repeat;
+        color: #FFF;
+        background-size: cover;
+        height: 900px;
+        width: 100%;
+        text-align: center;
+        background-position: left top;
+    }
+    .svgIcon {
+        width: 30%;
+    }
+    #contact {
+        text-align: left;
+        section {
+            display: inline-block;
+            clear: both;
+            margin-left: 24px;
+        }
+        h3 {
+            padding-bottom: 70px;
+        }
+        p {
+            font-size: 35px;
+        }
+    }
+    #headline h1 {
+        display: block;
+        vertical-align: baseline;
+        margin-top: 342px;
+        font-size: 80px;
+        line-height: 94px;
+    }
+    #threeSections p {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    h6 + p {
+        text-align: left;
+    }
+    .address p {
+        padding-bottom: 35px;
+    }
+    .phone p {
+        padding-bottom: 35px;
+    }
+}
+
+@media(max-width: 767px) {
+    .navbar-toggle {
+        background: $url_7 no-repeat;
+        display: block;
+        overflow: hidden;
+        height: 45px;
+        width: 45px;
+    }
+    .navbar-collapse {
+        background-color: $color_tuna_approx;
+        border-top: none;
+        box-shadow: none;
+        ul {
+            margin: 0 -15px;
+        }
+        li {
+            padding: 12px 0;
+            text-align: left;
+            &:hover {
+                background-color: $color_matisse_approx;
+            }
+        }
+    }
+    .navbar-brand {
+        height: 42px;
+        margin-left: 20px;
+    }
+    .header {
+        background: $url_5 no-repeat;
+        color: #FFF;
+        background-size: cover;
+        height: 900px;
+        width: 100%;
+        text-align: center;
+        background-position: left top;
+    }
+    .svgIcon {
+        width: 30%;
+    }
+    #contact {
+        p {
+            text-align: left;
+        }
+        section {
+            margin-left: 24px;
+        }
+    }
+    button.navbar-toggle {
+        margin-top: -12px;
+        margin-right: 20px;
+    }
+    #nav.affix .navbar-toggle {
+        margin-top: -7px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        &:hover {
+            background: $url_8 no-repeat;
+        }
+        &:active {
+            background: $url_8 no-repeat;
+        }
+        &:focus {
+            background: $url_8 no-repeat;
+        }
+    }
+    .navbar .navbar-nav li a:hover {
+        color: $white;
+    }
+    #nav.affix a.navbar-brand {
+        padding-bottom: none;
+        margin-top: -4px;
+    }
+    #headline h1 {
+        display: block;
+        vertical-align: baseline;
+        margin-top: 342px;
+        font-size: 80px;
+        line-height: 94px;
+    }
+    #threeSections p {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .tile li {
+        width: 50%;
+    }
+    .address p {
+        padding-bottom: 60px;
+    }
+    .phone p {
+        padding-bottom: 60px;
+    }
+}
+
+@media(max-width: 450px) {
+    .navbar-toggle {
+        background: $url_7 no-repeat;
+        display: block;
+        overflow: hidden;
+        height: 45px;
+        width: 45px;
+    }
+    .navbar-collapse {
+        background-color: $color_tuna_approx;
+        border-top: none;
+        box-shadow: none;
+        ul {
+            margin: 0 -15px;
+        }
+        li {
+            padding: 12px 0;
+            text-align: left;
+            &:hover {
+                background-color: $color_matisse_approx;
+            }
+        }
+    }
+    .navbar-brand {
+        height: 42px;
+        margin-left: 20px;
+    }
+    .header {
+        background: $url_5 no-repeat;
+        color: #FFF;
+        background-size: cover;
+        height: 900px;
+        width: 100%;
+        text-align: center;
+        background-position: left top;
+    }
+    .svgIcon {
+        width: 30%;
+    }
+    #team {
+        p {
+            font-size: 20px;
+            line-height: 35px;
+        }
+        h4 {
+            font-size: 28px;
+            margin: 20px auto;
+        }
+    }
+    #contact {
+        p {
+            font-size: 25px;
+        }
+        h3 {
+            padding-bottom: 60px;
+        }
+    }
+    button.navbar-toggle {
+        margin-top: -12px;
+        margin-right: 20px;
+    }
+    #nav.affix .navbar-toggle {
+        margin-top: -7px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        &:hover {
+            background: $url_8 no-repeat;
+        }
+        &:active {
+            background: $url_8 no-repeat;
+        }
+        &:focus {
+            background: $url_8 no-repeat;
+        }
+    }
+    .navbar .navbar-nav li a:hover {
+        color: $white;
+    }
+    #nav.affix a.navbar-brand {
+        padding-bottom: none;
+        margin-top: -4px;
+    }
+    #headline h1 {
+        display: block;
+        vertical-align: baseline;
+        margin-top: 120px;
+        font-size: 46px;
+        line-height: 65px;
+    }
+    #about p {
+        font-size: 20px;
+        line-height: 35px;
+        padding: 0 20px;
+    }
+    #threeSections p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .address p {
+        padding-bottom: 25px;
+    }
+    .phone p {
+        padding-bottom: 25px;
+    }
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+#headline h1 {
+    color: $white;
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: none;
+}
+
+#intro p {
+    margin-top: 135px;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.container #about {
+    background-color: $color_pickled_bluewood_approx;
+    color: $white;
+}
+
+#nav.affix {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: inline-block;
+    background-color: $color_pickled_bluewood_approx;
+    padding-top: 20px;
+    border-radius: 0;
+}
