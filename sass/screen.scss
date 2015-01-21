@@ -1,5 +1,7 @@
 @import "variable";
 
+//--------------------------------------------DEFAULT---------------------------------------------------------//
+
 %extend_1 {
     border-bottom: 1px dotted;
     text-decoration: none;
@@ -45,14 +47,14 @@ body {
 
 h1 {
     font-family: $font_0, $font_1;
-    font-size: 120px;
+    font-size: 80px;
     line-height: 130px;
     text-align: center;
 }
 
 h2 {
     font-family: $font_0, $font_1;
-    font-size: 60px;
+    font-size: 80px;
     line-height: 70px;
     text-align: center;
 }
@@ -89,7 +91,7 @@ h6 {
 p {
     font-family: $font_0, $font_1;
     font-size: 22px;
-    line-height: 44px;
+    line-height: 35px;
     text-align: center;
 }
 
@@ -146,6 +148,33 @@ a {
     }
 }
 
+//--------------------------------------------VIDEO---------------------------------------------------------//
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+video {
+    z-index: 0;
+    &.fillWidth {
+        bottom: 0px;
+        right: 0px;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        background-size: cover;
+    }
+}
+
+//--------------------------------------------HEADER---------------------------------------------------------//
+
 .navbar {
     background: transparent;
     border: none;
@@ -169,43 +198,30 @@ a {
 }
 
 .navbar-default {
-    .navbar-brand {
+    h1 .navbar-brand {
         background: $url_3;
         display: block;
         height: 52px;
         width: 140px;
         margin-top: -11px;
-        &:hover {
-            background: $url_3;
-            display: inline;
+            text-indent: -999px;
+            text-align: center;
+            &:hover {
+                background: $url_3;
+                display: inline;
+            }
         }
-    }
-    .navbar-nav > .active > a {
-        @extend %extend_3;
-        &:hover {
+        .navbar-nav > .active > a {
             @extend %extend_3;
-        }
-        &:focus {
-            @extend %extend_3;
+            &:hover {
+                @extend %extend_3;
+            }
+            &:focus {
+                @extend %extend_3;
+            }
         }
     }
-}
 
-#video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-video {
-    z-index: 0;
-    &.fillWidth {
-        width: 100%;
-    }
-}
 
 .header {
     background: $url_5 center center fixed;
@@ -227,17 +243,19 @@ video {
 
 div {
     &.circle {
-        background: $color_screamin_green_approx;
-        border-radius: 100%;
-        height: 50px;
-        width: 50px;
-        margin: 10px auto 5px;
-        a {
-            font: $font_0, $font_1;
-            font-size: 50px;
-            color: $white;
-            text-decoration: none;
-        }
+        border-top: 1px solid rgba(169, 169, 169, 0.27);
+        padding: 48px 0;
+    }
+    .circle a {
+        text-indent: 100%;
+        display: block;
+        overflow: hidden;
+        margin: -75px auto;
+        width: 60px;
+        height: 60px;
+        background: url(../images/explore.png) no-repeat #2ecc71;
+        background-position: center;
+        border-radius: 30px;
     }
     &#scroll-able {
         height: 10px;
@@ -247,12 +265,16 @@ div {
     }
 }
 
+//--------------------------------------------ABOUT---------------------------------------------------------//
 .about-wrap {
     background-color: $color_pickled_bluewood_approx;
 }
 
+.container #about {
+    color: $white;
+}
+
 #threeSections {
-    background-color: $color_pickled_bluewood_approx;
     color: $white;
     p {
         font-family: $font_2, $font_3;
@@ -271,6 +293,8 @@ div {
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
+//--------------------------------------------PORTFOLIO---------------------------------------------------------//
 
 #portfolio {
     background-color: $white;
@@ -316,7 +340,7 @@ div {
 
 .tile {
     list-style: none;
-    margin: 0;
+    margin-bottom: 75px;
     padding: 0;
     img {
         width: 100%;
@@ -333,7 +357,7 @@ div {
 
 .caption-inner {
     text-align: center;
-    margin: 42% auto;
+    margin: 15% auto;
 }
 
 .captions {
@@ -351,29 +375,29 @@ div {
 }
 
 .title {
-    padding-bottom: 10px;
+    padding: 5px;
 }
 
 .viewProject {
-    @extend %extend_4;
+    display: block;
+    font-family: "Droid Serif", serif;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 25px auto;
+    border: 2px solid;
+    border-radius: 25px;
+    width: 152px;
+    height: 40px;
+    font-size: 22px;
+    padding: 8px;
     &:hover {
         text-decoration: none;
-        color: $color_mountain_meadow_approx;
+        color: $color_screamin_green_approx;
     }
 }
 
-.viewWebsite {
-    @extend %extend_4;
-    margin-top: 80px;
-    &:hover {
-        text-decoration: none;
-        color: $color_mountain_meadow_approx;
-    }
-}
-
-.team-info {
-    margin: 20px auto;
-}
+//--------------------------------------------TEAM---------------------------------------------------------//
 
 #team {
     background-color: $color_boston_blue_approx;
@@ -389,57 +413,91 @@ div {
         color: $white;
         margin: 20px auto;
     }
+    .team-info {
+        padding: 30px;
+        float: none;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: top;
+        zoom: 1;
+        text-align: center;
+        font-size: 200%;
+
+        img {
+            margin: 15px;
+        }
+    }
+    .logo-service img {
+        border: 5px solid white;
+        border-radius: 115px;
+    }
 }
+
+//--------------------------------------------CONTACT---------------------------------------------------------//
 
 #contacts {
-    float: left;
+    margin: 30px;
+
+    input, textarea {
+        @extend %extend_5;
+        margin: 15px 15px 15px 0;
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid #2ecc71;
+    }
 }
 
-input {
-    @extend %extend_5;
-}
-
-textarea {
-    @extend %extend_5;
-}
-
-.button {
+.button-set .button {
+    color: #ffffff;
     margin: 45px 0 5px;
     background: $color_forest_green_approx;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     width: 100px;
+    height: 30px;
+    font-size: 20px;
 }
 
 .addres-info {
-    float: right;
+    margin: 30px;
     font: 20px $font_0, $font_1;
     dt {
         margin: 10px auto;
     }
 }
 
+//--------------------------------------------FOOTER---------------------------------------------------------//
+
 #contact {
+
     background-color: $color_pickled_bluewood_approx;
     color: $white;
+    padding: 50px 0;
+    font-weight: bold;
+
     p {
         text-align: left;
+        font-size: 18px;
     }
     a {
         margin: 10px auto;
         color: $white;
-        font-size: 28px;
+        font-size: 18px;
+        &:hover {
+            text-decoration: none;
+        }
     }
     .logo {
-        margin: auto 20px;
+        margin: 20px;
     }
     .social-link li {
         display: inline-flex;
-        margin: auto 10px;
+        margin-right: 10px;
     }
 }
 
-@media(min-width: 1550px) {
+//--------------------------------------------ALL MEDIA---------------------------------------------------------//
+@media(min-width: 1921px) {
     .tile li {
         width: 25%;
         &:nth-last-child(3) {
@@ -489,9 +547,10 @@ textarea {
         }
         p {
             font-size: 35px;
+            margin: 20px auto;
         }
     }
-    #headline h1 {
+    #headline h2 {
         display: block;
         vertical-align: baseline;
         margin-top: 342px;
@@ -501,15 +560,6 @@ textarea {
     #threeSections p {
         padding-left: 40px;
         padding-right: 40px;
-    }
-    h6 + p {
-        text-align: left;
-    }
-    .address p {
-        padding-bottom: 35px;
-    }
-    .phone p {
-        padding-bottom: 35px;
     }
 }
 
@@ -555,6 +605,7 @@ textarea {
     #contact {
         p {
             text-align: left;
+            margin: 20px auto;
         }
         section {
             margin-left: 24px;
@@ -586,7 +637,7 @@ textarea {
         padding-bottom: none;
         margin-top: -4px;
     }
-    #headline h1 {
+    #headline h2 {
         display: block;
         vertical-align: baseline;
         margin-top: 342px;
@@ -599,12 +650,6 @@ textarea {
     }
     .tile li {
         width: 50%;
-    }
-    .address p {
-        padding-bottom: 60px;
-    }
-    .phone p {
-        padding-bottom: 60px;
     }
 }
 
@@ -648,6 +693,11 @@ textarea {
         width: 30%;
     }
     #team {
+        .logo-service img {
+            border: 5px solid white;
+            border-radius: 115px;
+            width: 185px;
+        }
         p {
             font-size: 20px;
             line-height: 35px;
@@ -660,6 +710,7 @@ textarea {
     #contact {
         p {
             font-size: 25px;
+            margin: 20px auto;
         }
         h3 {
             padding-bottom: 60px;
@@ -691,7 +742,7 @@ textarea {
         padding-bottom: none;
         margin-top: -4px;
     }
-    #headline h1 {
+    #headline h2 {
         display: block;
         vertical-align: baseline;
         margin-top: 120px;
@@ -707,19 +758,13 @@ textarea {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .address p {
-        padding-bottom: 25px;
-    }
-    .phone p {
-        padding-bottom: 25px;
-    }
 }
 
 .btn:focus {
     outline: 0;
 }
 
-#headline h1 {
+#headline h2{
     color: $white;
     position: relative;
     z-index: 2;
@@ -734,11 +779,6 @@ textarea {
     margin-top: 135px;
     margin-bottom: 90px;
     text-align: center;
-}
-
-.container #about {
-    background-color: $color_pickled_bluewood_approx;
-    color: $white;
 }
 
 #nav.affix {

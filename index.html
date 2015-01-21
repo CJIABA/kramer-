@@ -19,8 +19,10 @@
 <header class="header" style="height: 936px;">
 
     <div id="video-container">
-        <video autoplay loop class="fillWidth">
+        <video autoplay="autoplay" loop="loop" class="fillWidth" poster="images/Kramer_bg.png">
             <source src="video/main-video.webm" type="video/webm"/>
+            <source src="video/main-video.ogv" type="video/ogv"/>
+            <source src="video/main-video.mp4" type="video/mp4"/>
             Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
     </div>
@@ -32,7 +34,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseNavbar">
                     <span class="sr-only">Toggle navigation</span>
                 </button>
-                <a class="navbar-brand" href="#"></a>
+                <h1><a class="navbar-brand" href="#">Kramer</a></h1>
             </div>
             <div class="collapse navbar-collapse navbar-responsive-collapse" id="collapseNavbar">
                 <ul class="nav navbar-nav navbar-right">
@@ -47,15 +49,14 @@
     </nav>
     <div class="container" id="headline">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 text">
-                <h1 class="animated fadeInDown hero" style="height: 936px;">Welcome To Kramerica Industries</h1>
+            <div class="col-md-12 col-md-offset-1 text">
+                <h2 class="animated fadeInDown hero" style="height: 936px;">Welcome To Kramerica Industries</h2>
             </div>
         </div>
     </div>
     <div id="bottom">
         <div class="seewhy">
-
-            <div class="circle"><a href="#about">V</a></div>
+            <div class="circle"><a href="#about" class="V">explore</a></div>
         </div>
     </div>
 </header>
@@ -105,119 +106,110 @@
     </div>
 </div>
 <div id="portfolio">
-    <h3>Portfolio</h3>
+    <section class="container">
+        <h3>Portfolio</h3>
 
-    <div id="projekt-menu">
-        <ul>
-            <li><a href="#">All</a></li>
-            <li><a href="#" class='active'>Design</a></li>
-            <li><a href="#">Web</a></li>
-            <li><a href="#">Illustration</a></li>
-            <li><a href="#">Motion</a></li>
+        <div id="projekt-menu">
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#" class='active'>Design</a></li>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">Motion</a></li>
+            </ul>
+        </div>
+        <ul class="tile clearfix">
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank"
+                       class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project1.jpg" alt="Go Fossil Free Website">
+            </li>
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank"
+                       class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project2.jpg" alt="Progress 350 Website">
+            </li>
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work" id="workss">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank"
+                       class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project3.jpg" alt="Belmore Bootmakers Website">
+            </li>
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank"
+                       class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project4.jpg" alt="Seasonal Nutrition Branding">
+            </li>
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank" class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project5.jpg" alt="12 Exhibition Website and Film">
+            </li>
+            <li class="exmple col-xs-12 col-sm-5 col-md-3 col-lg-4 work">
+                <div class="captions" style="display: none;">
+                    <p class="caption-inner">
+                    </p><h4 class="title">Project Title</h4>
+                    <a href="#" target="_blank"
+                       class="viewProject">View Project</a>
+
+                    <p></p>
+                </div>
+                <img src="images/project6.jpg" alt="FoodRave Website Design">
+            </li>
         </ul>
-    </div>
-    <ul class="tile clearfix">
-        <li class="work">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 1</h4>
-                <a href="#" target="_blank"
-                   class="viewProject">View site</a>
-                <br>
-                <br>
-                <a href="#" target="_blank" class="viewWebsite">View Website</a>
-
-                <p></p>
-            </div>
-            <img src="images/project1.png" alt="Go Fossil Free Website">
-        </li>
-        <li class="work">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 2</h4>
-                <a href="#" target="_blank"
-                   class="viewProject">View sitey</a>
-                <br>
-                <br>
-                <a href="#" target="_blank" class="viewWebsite">View Website</a>
-
-                <p></p>
-            </div>
-            <img src="images/project2.png" alt="Progress 350 Website">
-        </li>
-        <li class="work" id="workss">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 3</h4>
-                <a href="#" target="_blank"
-                   class="viewProject">View site</a>
-                <br>
-                <br>
-                <a href="#" class="viewWebsite">View Website</a>
-
-                <p></p>
-            </div>
-            <img src="images/project3.png" alt="Belmore Bootmakers Website">
-        </li>
-        <li class="work">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 4</h4>
-                <a href="#" target="_blank"
-                   class="viewProject">View site</a>
-
-                <p></p>
-            </div>
-            <img src="images/project4.png" alt="Seasonal Nutrition Branding">
-        </li>
-        <li class="work">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 5</h4>
-                <a href="#" target="_blank" class="viewProject">Viewsite</a>
-
-                <p></p>
-            </div>
-            <img src="images/project5.png" alt="12 Exhibition Website and Film">
-        </li>
-        <li class="work">
-            <div class="captions" style="display: none;">
-                <p class="caption-inner">
-                </p><h4 class="title">site 6</h4>
-                <a href="#" target="_blank"
-                   class="viewProject">Viewsite</a>
-                <br>
-                <br>
-                <a href="#" target="_blank" class="viewWebsite">View Website</a>
-
-                <p></p>
-            </div>
-            <img src="images/project6.png" alt="FoodRave Website Design">
-        </li>
-    </ul>
+    </section>
 </div>
+
 
 <div id="team">
     <section class="container">
         <div class="row">
             <h3 class="col-md-4 col-md-offset-4">Team</h3>
         </div>
-        <div class="team-info col-md-6 col-xs-12">
+        <div class="team-info col-xs-12 col-sm-5 col-md-4 col-lg-4">
             <span class="logo-service"><img src="images/cosmo.png" alt="Cosmo Kramer"/></span>
             <h4>Cosmo Kramer</h4>
 
             <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.Aenean
                 sollicitudin, lorem quis bibendum auctor,</p>
-            <a href="#"><img src="images/twit.png" alt="twitter"/></a>
-            <a href="#"><img src="images/instag.png" alt="instagram"/></a>
+            <a href="#" class="social-team"><img src="images/twit.png" alt="twitter"/></a>
+            <a href="#" class="social-team"><img src="images/instag.png" alt="instagram"/></a>
         </div>
-        <div class="team-info col-md-6 col-xs-12">
+        <div class="team-info col-xs-12 col-sm-5 col-md-4 col-lg-4">
             <span class="logo-service"><img src="images/george.png" alt="George Constanza"/></span>
             <h4>George Constanza</h4>
 
             <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
                 aliquet. Aeneansollicitudin, lorem quis bibendum auctor,</p>
-            <a href="#"><img src="images/twit.png" alt="twitter"/></a>
+            <a href="#" class="social-team"><img src="images/twit.png" alt="twitter"/></a>
         </div>
     </section>
 </div>
@@ -233,7 +225,7 @@
             <h4 class="col-md-7 col-md-offset-2">Please contact us and we can discuss work!</h4>
         </div>
 
-        <form class="col-md-4" id="contacts" action="#" method="post">
+        <form class="col-xs-8 col-sm-8 col-md-6 col-lg-6" id="contacts" action="#" method="post">
             <ul>
                 <li>
                     <input type="text" id="name" name="name" placeholder="Name"/>
@@ -250,7 +242,7 @@
             </div>
         </form>
 
-        <div class="col-md-4 addres-info">
+        <div class="col-xs-10 col-sm-10 col-md-3 col-lg-3 addres-info">
             <dl>
                 <dt>Address</dt>
                 <dd>129 West 81st Street New York, NY 10024</dd>

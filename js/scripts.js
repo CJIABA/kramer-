@@ -38,6 +38,25 @@ $(document).ready(function() {
 		  var posi = $(link).offset().top;
 		  $('body').animate({scrollTop:posi},300);
 		});*/
+   $("#bottom .circle a[href^='#']").on('click', function(e) {
+
+       // prevent default anchor click behavior
+       e.preventDefault();
+
+       // store hash
+       var hash = this.hash;
+
+       // animate
+       $('html, body').animate({
+           scrollTop: $(this.hash).offset().top
+       }, 1200, function(){
+
+           // when done, add hash to url
+           // (default click behaviour)
+           window.location.hash = hash;
+       });
+
+   });
 
 		$("#nav ul li a[href^='#']").on('click', function(e) {
 
